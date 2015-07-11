@@ -1,0 +1,1 @@
+#这一章主要是讲Javascript中经典的function使用
