@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Introduction | Introduction</title>
+        <title>Angular JS中常用的将input中的value转为数字的directive | Introduction</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.1.0">
@@ -15,18 +15,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
-        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
         
-    <link rel="stylesheet" href="gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/style.css">
     
     
 
         
     
     
-    <link rel="next" href="./Javascript/fuction.html" />
+    <link rel="next" href="../angularjs_select_set_default.html" />
     
+    
+    <link rel="prev" href="../Javascript/angularjs.html" />
     
 
         
@@ -34,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="0" data-basepath="." data-revision="Mon Jul 13 2015 09:21:41 GMT-0700 (Pacific Daylight Time)">
+    <div class="book" data-level="1.2" data-basepath=".." data-revision="Mon Jul 13 2015 09:21:41 GMT-0700 (Pacific Daylight Time)">
     
 
 <div class="book-summary">
@@ -51,10 +53,10 @@
 
         
     
-        <li class="chapter active" data-level="0" data-path="index.html">
+        <li class="chapter " data-level="0" data-path="index.html">
             
                 
-                    <a href="./index.html">
+                    <a href="../index.html">
                         <i class="fa fa-check"></i>
                         
                         Introduction
@@ -67,7 +69,7 @@
         <li class="chapter " data-level="1" data-path="Javascript/fuction.html">
             
                 
-                    <a href="./Javascript/fuction.html">
+                    <a href="../Javascript/fuction.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.</b>
@@ -83,7 +85,7 @@
         <li class="chapter " data-level="1.1" data-path="Javascript/angularjs.html">
             
                 
-                    <a href="./Javascript/angularjs.html">
+                    <a href="../Javascript/angularjs.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.1.</b>
@@ -95,10 +97,10 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="Javascript/Method.html">
+        <li class="chapter active" data-level="1.2" data-path="Javascript/Method.html">
             
                 
-                    <a href="./Javascript/Method.html">
+                    <a href="../Javascript/Method.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.2.</b>
@@ -113,7 +115,7 @@
         <li class="chapter " data-level="1.3" data-path="angularjs_select_set_default.html">
             
                 
-                    <a href="./angularjs_select_set_default.html">
+                    <a href="../angularjs_select_set_default.html">
                         <i class="fa fa-check"></i>
                         
                             <b>1.3.</b>
@@ -232,7 +234,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="./" >Introduction</a>
+        <a href="../" >Introduction</a>
     </h1>
 </div>
 
@@ -242,8 +244,21 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="introduction">Introduction</h1>
-
+                        <h2 id="angular-js%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B0%86input%E4%B8%AD%E7%9A%84value%E8%BD%AC%E4%B8%BA%E6%95%B0%E5%AD%97%E7%9A%84directive">Angular JS&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x5C06;input&#x4E2D;&#x7684;value&#x8F6C;&#x4E3A;&#x6570;&#x5B57;&#x7684;directive</h2>
+<pre><code>.directive(&apos;convertToNumber&apos;, function() {
+  return {
+    require: &apos;ngModel&apos;,
+    link: function(scope, element, attrs, ngModel) {
+      ngModel.$parsers.push(function(val) {
+        return parseInt(val, 10);
+      });
+      ngModel.$formatters.push(function(val) {
+        return &apos;&apos; + val;
+      });
+    }
+  };
+});
+</code></pre>
                     
                     </section>
                 
@@ -253,17 +268,19 @@
         </div>
 
         
+        <a href="../Javascript/angularjs.html" class="navigation navigation-prev " aria-label="Previous page: Angular JS Enter Directive"><i class="fa fa-angle-left"></i></a>
         
-        <a href="./Javascript/fuction.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Javascript Function"><i class="fa fa-angle-right"></i></a>
+        
+        <a href="../angularjs_select_set_default.html" class="navigation navigation-next " aria-label="Next page: AngularJS Select Set Default"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
-<script src="gitbook/app.js"></script>
+<script src="../gitbook/app.js"></script>
 
     
-    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
     
 
 <script>
