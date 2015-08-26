@@ -5,7 +5,6 @@
    * [Angular JS Enter Directive](Javascript/angularjs.md)
    * [Angular JS中常用的将input中的value转为数字的directive](Javascript/Method.md)
    * [AngularJS Select Set Default](angularjs_select_set_default.md)
-* [第2章](x2/c2.md)
 * [LeetCode Javascript](leetcode_javascript.md)
    * [Excel Sheet Column Title](excel_sheet_column_title.md)
    * [Excel Sheet Column Number](excel_sheet_column_number.md)
